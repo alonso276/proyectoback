@@ -1,0 +1,96 @@
+
+### Recuperar productores
+GET http://localhost:3000/api/productores/all
+Authorization: lala
+
+### Recuperar comarcas: 
+GET http://localhost:3000/api/productores/comarca
+
+### Recuperar una comarca: http://localhost:3000/api/productores/com/metropolitana
+GET http://localhost:3000/api/productores/com/:comarca
+
+###recuperar producto por categoria---http://localhost:3000/api/productores/cat/verduras
+GET http://localhost:3000/api/productores/cat/verduras
+
+###
+GET http://localhost:3000/api/productores/comprobarRegistro
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjYxLCJjYWR1Y2lkYWQiOjE2MDgyMzUxMzcsImlhdCI6MTYwODE0ODczN30.W-fiUEEVeCb74hoHYgmyVriSg_3ruQgTOR6OBRwr1yo
+
+### recuperar todos los productos
+GET http://localhost:3000/api/productos/all
+
+### recuperar las categorias de productos en el select
+GET http://localhost:3000/api/productos/categoria
+
+### recuperar los productos por productor
+GET http://localhost:3000/api/productos/from/2
+
+
+### recupera por categoria: http://localhost:3000/api/productos/cat/frutas
+GET http://localhost:3000/api/productos/cat/:categoria
+
+
+### recupera productos por comarca: http://localhost:3000/api/productos/com/metropolitana
+
+GET http://localhost:3000/api/productos/com/:comarca
+
+### Registra usuarios
+POST http://localhost:3000/api/usuarios/registro
+Content-Type:application/json
+
+{
+    "nombre": "platanitos4",
+    "apellidos": "Canarias",
+    "email": "platanitos9@gmail.com",
+    "contraseña":"12345",
+    "direccion": "barrio",
+    "telefono":"646062567",
+    "perfil":"comprador"
+}
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-type:application/json
+
+
+{
+  "contraseña":"12345",
+  "email":"platanitos9@gmail.com"
+  
+}
+
+
+###
+POST http://localhost:3000/api/productores/registro
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjY0LCJjYWR1Y2lkYWQiOjE2MDgzMTI1NTgsImlhdCI6MTYwODIyNjE1OH0.0tPbwnmjBc6hX4uC-HpIpCh6gex7C6GkMvlDN6qDO6M
+
+{
+    "nombre_empresa": "limones novales",
+    "provincia": "Madrid",
+    "comarca": "madrid",
+    "municipio":"madrid",
+    "actividad":"vinícola",
+    "direccion_produccion": "calle gran vía, 33,28013, Madrid",
+    "email_empresa":"amapola@gmail.com",
+    "telefono_empresa":646062567,
+    
+    "comentario":"zaszas"
+    
+   
+}
+
+###
+POST http://localhost:3000/api/productos/registro
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjYwLCJjYWR1Y2lkYWQiOjE2MDgyMDgxNjMsImlhdCI6MTYwODEyMTc2M30.t-fndt-Zn0EPLuRn1QckxIzRsvO-JV0ewaubKBT6BJQ
+
+{   
+    "categoria":"frutas",
+    "nombre": "peras",
+    "cantidad":"3",
+    "precio":2.99,
+    "certificado":"eco",
+    "imagen":"imagen"
+    
+}
